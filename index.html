@@ -1,0 +1,84 @@
+<!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <title>d3 and Angular</title>
+    <meta charset=”utf-8”>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/dojo/1.7.2/dijit/themes/claro/claro.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/dojo/1.7.2/dojo/dojo.js" data-dojo-config="async: true"></script>
+	 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body ng-app="myApp">
+	<div class="”container-fluid" ng-controller="DemoCtrl">
+    <div class="row-fluid">
+	<!--Padding left-->
+	<div class="span1">
+	</div>
+	<div class="span10">
+	<h2><small>click on the Bar Chart(D3) to update the Pie Chart(HighChart)</small></h2>
+	</div>
+	<div class="span1">
+	</div>
+	</div>
+	 <div class="row-fluid">
+	 <div class="span1">
+	</div>
+      <div class="span10" >
+	  
+		<span class="label label-info">D3 Component</span>
+		<br/>
+		<br/>
+		<br/>
+        <d3-bars data="Data" label="name" on-click="d3OnClick(item)"></d3-bars>
+        <br>
+        <br>
+	</div>
+	<div class="row-fluid">
+	 <div class="span1">
+	</div>
+    <div class="span5" >
+		<span class="label label-important"></span>
+		<br/>
+		<br/>
+		<span class="label label-success">HighCharts Component</span>
+		<hc-Pie data="ChartData" ></hc-Pie>
+		<br/>
+		<br/>
+	</div>
+	<div class="span6" >
+
+		<span class="label label-warning">Dojo Component</span>
+		<br/>
+		<br/>
+		<br/>
+		<div class ="dojo-Pie" data="ChartData" ></div>
+		<br/>
+		<br/>
+		
+      </div>
+    </div>
+	<div class="row-fluid">
+	 <div class="span1">
+	</div>
+	<div class="span10">
+	<a class="btn btn-primary btn-large" ng-click="btnRefreshClick()">Angular Refresh</a>
+	</div>
+	</div>
+</div>
+</div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/highcharts-more.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/services/d3.js"></script>
+    <script src="scripts/controllers/demoCtrl.js"></script>
+	<script src="scripts/directives/HiChartsBasic.js"></script>
+    <script src="scripts/directives/d3Basic.js"></script>
+	<script src="scripts/directives/DojoBasicChart.js"></script>
+  </body>
+</html>
