@@ -1,2 +1,4 @@
-bchdh
+function nice(){
+	return 1
+}
 
